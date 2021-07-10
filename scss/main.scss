@@ -1,0 +1,191 @@
+@import "variables";
+@import "base";
+
+#topbar {
+  background-color: $color-primary;
+  .topbar__list {
+    display: inline-block;
+    margin: 0;
+    margin-right: 7.6rem;
+    text-align: center;
+    height: 3.9rem;
+    background-color: $color-blue;
+    border-radius: 2px 2px 20px 20px;
+    .nav-link {
+      margin-right: 1.5rem;
+      color: $color-white;
+      opacity: 0.9;
+      transform: translateY(30%);
+      transition: opacity 0.2s;
+      &:first-child {
+        margin-left: 1.5rem;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+#navigation {
+  margin: 0;
+  background-color: $color-primary;
+  .navbar {
+    &-brand {
+      &__logo {
+        height: 6.2rem;
+        width: 26rem;
+
+        margin-left: 7.6rem;
+        @media only screen and (max-width: 767px) {
+          height: 4.2rem;
+          width: 20rem;
+        }
+      }
+    }
+    &__list {
+      text-align: center;
+      margin-right: 7.6rem;
+      .nav-link {
+        color: $color-white;
+        font-size: 1.6rem;
+        opacity: 0.9;
+        transition: all 0.2s;
+        &:not(:last-child) {
+          @media only screen and (min-width: 992px) {
+            margin-right: 2rem;
+          }
+        }
+        &:hover {
+          opacity: 1;
+          transform: translateY(-1px);
+        }
+      }
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        .nav-link {
+          padding: 1.2rem 0;
+        }
+      }
+    }
+  }
+}
+
+.overview {
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  background-color: $color-primary;
+  &__heading {
+    color: $color-white;
+    font-size: 6.6rem;
+    @media only screen and(max-width: 767px) {
+      font-size: 4rem;
+    }
+  }
+  &__banner {
+    padding-top: 10rem;
+    margin-top: -10rem;
+    padding-bottom: 10rem;
+    margin-bottom: -10rem;
+    margin-left: -10rem;
+    background: url(../images/Group284@2x.png) no-repeat;
+    background-size: 80% 110%;
+    background-position: center;
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 1rem;
+      order: -1;
+    }
+  }
+}
+
+.mission {
+  background-color: $color-primary;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  &__message {
+    margin-right: 3rem;
+  }
+  &__text {
+    font-size: 3rem;
+    color: $color-white;
+  }
+  &__card {
+    margin: 0 7.6rem;
+    margin-bottom: 7rem;
+    justify-content: center;
+    & > * {
+      margin-bottom: 3rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  &__output {
+    background-color: $color-primary-light-2;
+    padding: 2rem 0;
+    margin: 0 7.6rem;
+    color: $color-white;
+    border-radius: 2px;
+    &__specs {
+      text-align: center;
+      &--number {
+        font-size: 6rem;
+      }
+      &--text {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: 991px) {
+        &--number {
+          font-size: 4rem;
+        }
+        &--text {
+          font-size: 1.2rem;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        &--number {
+          font-size: 2.5rem;
+        }
+      }
+      @media only screen and (max-width: 280px) {
+        &--number {
+          font-size: 2.1rem;
+        }
+        &--text {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+.card {
+  color: $color-white;
+  height: 100%;
+  border-radius: 20px;
+  &-body {
+    margin: 0 2rem;
+  }
+  &--violet {
+    background-color: $color-primary-light;
+  }
+  &--blue {
+    background-color: $color-blue;
+  }
+  &--yellow {
+    background-color: $color-yellow;
+  }
+  &__title {
+    margin: 2rem 0 1rem 0;
+  }
+  &__text {
+    font-size: 1.4rem;
+    opacity: 0.9;
+  }
+}
