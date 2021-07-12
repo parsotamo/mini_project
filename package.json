@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "node-sass scss/main.scss static/css/main.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all devserver watch:sass",
+    "start": "npm-run-all -p build:css watch:sass",
     "prefix:css": "postcss --use autoprefixer -r static/css",
     "compress:css": "node-sass --output-style compressed static/css/main.css > static/css/main.min.css",
     "build:css": "npm-run-all prefix:css compress:css"
@@ -17,9 +17,16 @@
     "@fortawesome/fontawesome-free": "^5.15.2",
     "autoprefixer": "^8.6.5",
     "bootstrap": "^5.0.0-beta2",
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
     "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
     "postcss-cli": "^7.1.2",
-    "stylelint": "^13.12.0"
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "stylelint": "^13.12.0",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
   }
 }
